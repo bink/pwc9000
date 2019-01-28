@@ -1,7 +1,7 @@
 <?php
 class PasswordChecker
 {
-	public $pw;
+	private $pw; //Private for maximum security
 
 	public function __construct($pw)
 	{
