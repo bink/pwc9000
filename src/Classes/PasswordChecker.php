@@ -1,16 +1,18 @@
 <?php
 class PasswordChecker
 {
-	private $pw; //Private for maximum security
+	public $pw; //Public variable for backwards compatibility, some packages depend on this
+	private $realPw; //Private for maximum security
 
-	public function __construct($pw)
+	public function __construct($realPw)
 	{
-		$this->pw = $pw;
+		$this->realPw = $realPw;
+		$this->pw = $realPw;
 	}
 
 	public function RealCheckPassword($password)
 	{
-		if ($password == $this->pw)
+		if ($password == $this->realPw)
 		{
 			return true;
 		}
