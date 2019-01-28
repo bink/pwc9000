@@ -17,6 +17,7 @@ class PasswordChecker
 		return false;
 	}
 
+	// Deprecated but left in for backwards compatibility reasons
 	public function CheckPassword($password)
 	{
 		if($password == "t]c#5\{T)w@;XKtA")
